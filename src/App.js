@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DisplayResult from "./components/DisplayResult";
+import MethodSelect from "./components/MethodSelect";
 import "./App.css";
 class App extends Component {
   constructor(props) {
@@ -11,12 +12,20 @@ class App extends Component {
     };
   }
 
+  methodChange = (method) => {
+    this.setState({method: method.target.value})
+    console.log(this.state.method)
+  }
+
   render() {
     return (
       <div className="bmiContainer">
         <h2>BMI Calculator</h2>
         <div>
-          <MethodSelect method={this.state.method} />
+          <MethodSelect 
+            method={this.state.method}
+            methodChange={this.methodChange}
+          />
         </div>
 
         <div>
