@@ -1,4 +1,17 @@
 body {
   background-color: lightskyblue;
   color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bmiContainer {
+  width: 250px !important;
+  height: 250px !important;
+  margin: 0 !important;
+  text-align: center !important; 
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  -ms-transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%) !important;
 }
