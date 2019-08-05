@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-import DisplayResult from './components/DisplayResult';
+import React, { Component } from "react";
+import DisplayResult from "./components/DisplayResult";
 import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      weight: '',
-      height: ''
-    }
+      weight: "",
+      height: ""
+    };
   }
 
   render() {
@@ -15,18 +15,23 @@ class App extends Component {
       <div className="bmiContainer">
         <div>
           <label>Weight(kg): </label>
-          <input name="weight" value={this.state.weight} onChange={ (e) => this.setState({ weight: e.target.value })} />
+          <input
+            name="weight"
+            value={this.state.weight}
+            onChange={e => this.setState({ weight: e.target.value })}
+          />
         </div>
 
         <div>
           <label>Height(cm): </label>
-          <input name="height" value={this.state.height} onChange={ (e) => this.setState({ height: e.target.value })} />
+          <input
+            name="height"
+            value={this.state.height}
+            onChange={e => this.setState({ height: e.target.value })}
+          />
         </div>
 
-        <DisplayResult 
-          weight={this.state.weight}
-          height={this.state.height}
-        />
+        <DisplayResult weight={this.state.weight} height={this.state.height} />
       </div>
     );
   }
