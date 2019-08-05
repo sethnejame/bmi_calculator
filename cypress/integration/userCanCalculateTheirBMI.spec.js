@@ -1,4 +1,4 @@
-describe("BMI Converter", () => {
+describe("BMI Calculator", () => {
   before(function() {
     cy.visit("http://localhost:3000");
   });
@@ -8,8 +8,8 @@ describe("BMI Converter", () => {
     cy.reload();
   });
 
-  it('should display "BMI Converter" text on page', () => {
-    cy.contains("BMI Converter");
+  it('should display "BMI Calculator" text on page', () => {
+    cy.contains("BMI Calculator");
   });
 
   describe("Metric method", () => {

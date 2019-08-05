@@ -13,6 +13,7 @@ class App extends Component {
   render() {
     return (
       <div className="bmiContainer">
+        <h2>BMI Calculator</h2>
         <div>
           <label>Weight(kg): </label>
           <input

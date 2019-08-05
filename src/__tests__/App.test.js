@@ -10,7 +10,7 @@ import { exportAllDeclaration } from "@babel/types";
 describe("<App />", () => {
   it("renders header", () => {
     const component = shallow(<App />);
-    const header = <h1>BMI Converter</h1>;
+    const header = <h1>BMI Calculator</h1>;
     exportAllDeclaration(component.contains(header)).toEqual(true);
   });
 
