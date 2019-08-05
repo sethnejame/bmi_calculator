@@ -6,7 +6,8 @@ class App extends Component {
     super(props);
     this.state = {
       weight: "",
-      height: ""
+      height: "",
+      method: "metric"
     };
   }
 
@@ -14,6 +15,10 @@ class App extends Component {
     return (
       <div className="bmiContainer">
         <h2>BMI Calculator</h2>
+        <div>
+          <MethodSelect method={this.state.method} />
+        </div>
+
         <div>
           <label>Weight(kg): </label>
           <input
