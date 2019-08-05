@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import DisplayResult from './components/DisplayResult';
-
+import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
