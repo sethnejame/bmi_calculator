@@ -9,20 +9,11 @@ class App extends Component {
       weight: "",
       height: "",
       method: "metric",
-      unitHeight: "(cm)",
-      unitWeight: "(kg)"
     };
   }
 
   methodChange = (event) => {
     this.setState({method: event.target.value})
-    console.log(event.target.value)
-    if(this.state.method === "metric" ) {
-      this.setState({unitHeight: "(cm)", unitWeight: "(kg)"})
-    } else {
-      this.setState({unitHeight: "(inches)", unitWeight: "(lbs)"})
-    }
-    console.log(this.state.unitHeight)
   }
 
   componentDidUpdate
@@ -39,7 +30,7 @@ class App extends Component {
         </div>
 
         <div>
-          <label>Weight{this.state.unitWeight}</label>{"\n"}
+          <label>Weight{this.state.method === "metric" ? "(kg)" : "(lbs)"}</label>{"\n"}
           <input
             name="weight"
             value={this.state.weight}
@@ -48,7 +39,7 @@ class App extends Component {
         </div>
 
         <div>
-          <label>Height{this.state.unitHeight}</label>{"\n"}
+          <label>Height{this.state.method === "metric" ? "(cm)" : "(inches)"}</label>{"\n"}
           <input
             name="height"
             value={this.state.height}
