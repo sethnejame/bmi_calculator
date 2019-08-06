@@ -25,14 +25,16 @@ class App extends Component {
     console.log(this.state.unitHeight)
   }
 
+  componentDidUpdate
+
   render() {
     return (
       <div className="bmiContainer">
-        <h2>BMI Calculator</h2>
+        <h1>BMI Calculator</h1>
         <div style={{ paddingBottom: 10 }} >
           <MethodSelect 
             method={this.state.method}
-            methodChange={this.methodChange}
+            onChangeValue={this.methodChange}
           />
         </div>
 
@@ -54,7 +56,7 @@ class App extends Component {
           />
         </div>
 
-        <DisplayResult weight={this.state.weight} height={this.state.height} />
+        <DisplayResult weight={this.state.weight} height={this.state.height} method={this.state.method} />
       </div>
     );
   }

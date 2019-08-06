@@ -4,14 +4,13 @@ import { stub } from "sinon";
 
 import DisplayResult from "../components/DisplayResult";
 import MethodSelect from "../components/MethodSelect";
-import App from "./App";
-import { exportAllDeclaration } from "@babel/types";
+import App from "../App";
 
 describe("<App />", () => {
   it("renders header", () => {
     const component = shallow(<App />);
     const header = <h1>BMI Calculator</h1>;
-    exportAllDeclaration(component.contains(header)).toEqual(true);
+    expect(component.contains(header)).toEqual(true);
   });
 
   it("shows metric as the standard method", () => {
@@ -48,7 +47,7 @@ describe("<DisplayResult />", () => {
 
   it("displays the correct calculation(imperial)", () => {
     const component = shallow(
-      <DisplayResult method="imperial" weight="140" heigh="73" />
+      <DisplayResult method="imperial" weight="140" height="73" />
     );
     const response = (
       <div id="response">You are Underweight with a BMI of 18.47</div>

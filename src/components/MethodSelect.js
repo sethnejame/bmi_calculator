@@ -5,7 +5,7 @@ function MethodSelect(props) {
     <>
       <div>
       <label>Method</label>
-        <select name="method" id="method" onChange={props.methodChange} value={props.method}>
+        <select name="method" id="method" onChange={props.onChangeValue} value={props.method}>
           <option value="metric">Metric</option>
           <option value="imperial">Imperial</option>
         </select>
