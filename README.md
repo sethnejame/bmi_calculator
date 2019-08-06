@@ -1,3 +1,18 @@
+# BMI Calculator Revisited
+
+The following project was coded in React following Craft Academy's Week 6 Challenge - BMI Calculator Revisited.  The app has
+a small bit of styling and calculate's a user's BMI using both imperial and metric units.
+
+## BMI Calculator Deployment
+
+The BMI Calc is deployed on GitHub pages.  It can be visited via the following link: https://sethnejame.github.io/bmi_calculator"
+
+Simply select your preferred unit of measure from the drop down menu, then enter the appropriate values and the result will automatically display below the form fields.
+
+Enjoy!
+
+## The Boring Stuff
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
