@@ -14,21 +14,22 @@ class App extends Component {
     };
   }
 
-  methodChange = (method) => {
-    this.setState({method: method.target.value})
-    if(method === "metric" ) {
+  methodChange = (event) => {
+    this.setState({method: event.target.value})
+    console.log(event.target.value)
+    if(this.state.method === "metric" ) {
       this.setState({unitHeight: "(cm)", unitWeight: "(kg)"})
     } else {
       this.setState({unitHeight: "(inches)", unitWeight: "(lbs)"})
     }
-    console.log(this.state.method)
+    console.log(this.state.unitHeight)
   }
 
   render() {
     return (
       <div className="bmiContainer">
         <h2>BMI Calculator</h2>
-        <div>
+        <div style={{ paddingBottom: 10 }} >
           <MethodSelect 
             method={this.state.method}
             methodChange={this.methodChange}
@@ -36,7 +37,7 @@ class App extends Component {
         </div>
 
         <div>
-          <label>Weight{this.state.unitWeight}</label>
+          <label>Weight{this.state.unitWeight}</label>{"\n"}
           <input
             name="weight"
             value={this.state.weight}
@@ -45,7 +46,7 @@ class App extends Component {
         </div>
 
         <div>
-          <label>Height{this.state.unitHeight}</label>
+          <label>Height{this.state.unitHeight}</label>{"\n"}
           <input
             name="height"
             value={this.state.height}
