@@ -29,8 +29,8 @@ describe("BMI Calculator", () => {
     });
   });
 
-  describe("Imperial method", async () => {
-    beforeEach(async () => {
+  describe("Imperial method", () => {
+    beforeEach(() => {
       // This before block will be executed prior to each test
       cy.get('select[id="method"]').select("imperial");
       cy.get('input[name="weight"]').type("200");
